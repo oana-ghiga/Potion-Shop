@@ -8,7 +8,10 @@ public class HMDInfoManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        if(!XRSettings.isDeviceActive)
+        Debug.Log("Is Device Active " + XRSettings.isDeviceActive);
+        Debug.Log("Device Name is : " + XRSettings.loadedDeviceName);
+
+        if (!XRSettings.isDeviceActive)
         {
             Debug.Log("No Headset plugged");
         }
