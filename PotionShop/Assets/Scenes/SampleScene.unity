@@ -423,6 +423,7 @@ MonoBehaviour:
   myDoor: {fileID: 1769222438}
   openTrigger: 1
   closeTrigger: 0
+  animationName: OpenDoor
 --- !u!65 &625111489
 BoxCollider:
   m_ObjectHideFlags: 0

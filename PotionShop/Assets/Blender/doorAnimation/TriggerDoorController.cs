@@ -17,6 +17,8 @@ public class NewBehaviourScript : MonoBehaviour
     [SerializeField] private bool openTrigger = false;
     [SerializeField] private bool closeTrigger = false;
 
+    [SerializeField] private string animationName;
+
     private void OnTriggerEnter(Collider other)
     {
         //if (other.CompareTag("Player"))
@@ -37,7 +39,7 @@ public class NewBehaviourScript : MonoBehaviour
     private IEnumerator OpenDoorAndLoadScene()
     {
         Debug.Log("here");
-        myDoor.Play("OpenDoor", 0, 0.0f);
+        myDoor.Play(animationName, 0, 0.0f);
         yield return new WaitForSeconds(2.0f);
         DontDestroyOnLoad(player);
         DontDestroyOnLoad(directinalLight);
