@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class shop : MonoBehaviour
 {
@@ -10,7 +11,7 @@ public class shop : MonoBehaviour
     private GameObject gameManagerCoins;
 
     [SerializeField]
-    private Text price;
+    private TMP_Text price;
 
     private bool enought = true;
 
@@ -18,6 +19,7 @@ public class shop : MonoBehaviour
     {
         if (gameManager != null)
         {
+            Debug.Log("here");
             counterInventory counterScript = gameManager.GetComponent<counterInventory>();
             moneyManagerScript counterMoney = gameManagerCoins.GetComponent<moneyManagerScript>();
 
