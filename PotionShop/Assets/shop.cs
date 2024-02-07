@@ -12,6 +12,8 @@ public class shop : MonoBehaviour
     [SerializeField]
     private Text price;
 
+    private bool enought = true;
+
     public void OnButtonClicked()
     {
         if (gameManager != null)
@@ -21,8 +23,11 @@ public class shop : MonoBehaviour
 
             if (counterScript != null)
             {
-                counterScript.IncrementCounter();
-                counterMoney.SubtractMoney(ConvertStringWithoutLastCharToInt(price.text));
+                enought = counterMoney.SubtractMoney(ConvertStringWithoutLastCharToInt(price.text));
+                if (enought)
+                {
+                    counterScript.IncrementCounter();
+                }
             }
             else
             {

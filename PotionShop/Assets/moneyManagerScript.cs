@@ -19,13 +19,15 @@ public class moneyManagerScript : MonoBehaviour
         moneyText.text = "Money: " + moneyAmount.ToString();
     }
 
-    public void SubtractMoney(int amount)
+    public bool SubtractMoney(int amount)
     {
         if (moneyAmount - amount >= 0)
         {
             moneyAmount -= amount;
             moneyText.text = "Money: " + moneyAmount.ToString();
+            return true;
         }
+        return false;
     }
 
    
