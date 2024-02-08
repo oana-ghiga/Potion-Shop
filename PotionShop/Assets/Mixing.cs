@@ -80,7 +80,7 @@ public class Cauldron : MonoBehaviour
 
     void CreatePotion(GameObject potionPrefab)
     {
-    Vector3 spawnPosition = transform.position + transform.forward * 2.0f + transform.up * 4.0f; 
+     Vector3 spawnPosition = transform.position + transform.forward * 5.0f + transform.up * 0.5f; 
     Debug.Log("Creating potion at: " + spawnPosition.ToString());
     Instantiate(potionPrefab, spawnPosition, Quaternion.identity);
     }
