@@ -1,16 +1,20 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
-
+using TMPro;
 public class counterInventory : MonoBehaviour
 {
     [SerializeField]
-    private Text _title;
+    private TMP_Text _title;
 
     private int counter = 0;
 
     private void Start()
     {
-        _title.text = "0";
+
+        if (_title != null)
+        {
+            _title.text = "0";
+        }
     }
 
     public void OnButtonClick()
