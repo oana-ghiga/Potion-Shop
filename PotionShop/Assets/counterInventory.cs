@@ -6,14 +6,14 @@ public class counterInventory : MonoBehaviour
     [SerializeField]
     private TMP_Text _title;
 
-    private int counter = 0;
+    private int counter = 5;
 
     private void Start()
     {
 
         if (_title != null)
         {
-            _title.text = "0";
+            _title.text = "5";
         }
     }
 

@@ -1,10 +1,11 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class moneyManagerScript : MonoBehaviour
 {
     [SerializeField]
-    private Text moneyText;
+    private TMP_Text moneyText;
 
     private int moneyAmount = 3000;
 
